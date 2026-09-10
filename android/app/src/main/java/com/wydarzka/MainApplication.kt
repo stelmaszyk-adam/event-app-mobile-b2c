@@ -1,4 +1,4 @@
-package com.eventappmobile
+package com.wydarzka
 
 import android.app.Application
 import com.facebook.react.PackageList

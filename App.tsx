@@ -13,7 +13,7 @@ function App() {
       <SafeAreaProvider>
         <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
         <View className="flex-1 bg-surface items-center justify-center">
-          <Typography variant="headline-lg">EventApp</Typography>
+          <Typography variant="headline-lg">Wydarzka</Typography>
           <Typography variant="body-md" color="variant" className="mt-2">
             Odkrywaj wydarzenia w swoim mieście
           </Typography>
