@@ -30,24 +30,24 @@ run `pnpm lint && pnpm type-check` (backend/mobile: also `pnpm test`), then run
 
 ### Phase 0 — Preparation
 - [x] `tasks/phase-0-preparation/0-01-mock-environment-msw.md`
-- [ ] `tasks/phase-0-preparation/0-02-github-actions-ci-cd.md` *(3 open)*
-- [ ] `tasks/phase-0-preparation/0-00-component-library.md` *(6 open)*
+- [ ] `tasks/phase-0-preparation/0-02-github-actions-ci-cd.md` _(3 open)_
+- [ ] `tasks/phase-0-preparation/0-00-component-library.md` _(6 open)_
 
 ### Phase 1 — Core
-- [ ] `tasks/phase-1-core/1-01-auth-screens.md` *(18 open)*
-- [ ] `tasks/phase-1-core/1-03-map-and-discovery.md` *(20 open)*
-- [ ] `tasks/phase-1-core/1-04-detail-screens.md` *(19 open)*
-- [ ] `tasks/phase-1-core/1-05-push-notifications.md` *(12 open)*
-- [ ] `tasks/phase-1-core/1-06-social-sharing.md` *(3 open)*
-- [ ] `tasks/phase-1-core/1-07-event-submission.md` *(8 open)*
-- [ ] `tasks/phase-1-core/1-08-deep-linking.md` *(9 open)*
-- [ ] `tasks/phase-1-core/1-09-i18n.md` *(7 open)*
-- [ ] `tasks/phase-1-core/1-10-tos-and-consent.md` *(7 open)*
-- [ ] `tasks/phase-1-core/1-11-sentry-posthog.md` *(9 open)*
-- [ ] `tasks/phase-1-core/1-12-accessibility-and-performance.md` *(10 open)*
+- [ ] `tasks/phase-1-core/1-01-auth-screens.md` _(18 open)_
+- [ ] `tasks/phase-1-core/1-03-map-and-discovery.md` _(20 open)_
+- [ ] `tasks/phase-1-core/1-04-detail-screens.md` _(19 open)_
+- [ ] `tasks/phase-1-core/1-05-push-notifications.md` _(12 open)_
+- [ ] `tasks/phase-1-core/1-06-social-sharing.md` _(3 open)_
+- [ ] `tasks/phase-1-core/1-07-event-submission.md` _(8 open)_
+- [ ] `tasks/phase-1-core/1-08-deep-linking.md` _(9 open)_
+- [ ] `tasks/phase-1-core/1-09-i18n.md` _(7 open)_
+- [ ] `tasks/phase-1-core/1-10-tos-and-consent.md` _(7 open)_
+- [ ] `tasks/phase-1-core/1-11-sentry-posthog.md` _(9 open)_
+- [ ] `tasks/phase-1-core/1-12-accessibility-and-performance.md` _(10 open)_
 
 ### Phase 4 — Testing & Launch
-- [ ] `tasks/phase-4-testing/4-01-e2e-and-launch.md` *(12 open)*
+- [ ] `tasks/phase-4-testing/4-01-e2e-and-launch.md` _(12 open)_
 
 ### Phase 5 — Post-Launch (P2 — after PMF validation)
-- [ ] `tasks/phase-5-postlaunch/5-01-postlaunch-overview.md` *(6 open)*
+- [ ] `tasks/phase-5-postlaunch/5-01-postlaunch-overview.md` _(6 open)_
