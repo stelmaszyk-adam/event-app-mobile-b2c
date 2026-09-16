@@ -4,7 +4,7 @@
 > `[ ]`/`[x]` checkboxes inside each task file. Regenerate this file with
 > `python3 scripts/task-utils.py sync mobile-b2c` (run from the workspace root).
 
-**Next:** `tasks/phase-0-preparation/0-02-github-actions-ci-cd.md`
+**Next:** `tasks/phase-0-preparation/0-00-component-library.md`
 
 ---
 
@@ -30,7 +30,7 @@ run `pnpm lint && pnpm type-check` (backend/mobile: also `pnpm test`), then run
 
 ### Phase 0 — Preparation
 - [x] `tasks/phase-0-preparation/0-01-mock-environment-msw.md`
-- [ ] `tasks/phase-0-preparation/0-02-github-actions-ci-cd.md` _(3 open)_
+- [x] `tasks/phase-0-preparation/0-02-github-actions-ci-cd.md`
 - [ ] `tasks/phase-0-preparation/0-00-component-library.md` _(6 open)_
 
 ### Phase 1 — Core

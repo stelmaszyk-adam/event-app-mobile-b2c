@@ -1,8 +1,6 @@
 import React, { useCallback, useMemo, useRef } from 'react';
 import { View } from 'react-native';
-import BottomSheet, {
-  type BottomSheetProps,
-} from '@gorhom/bottom-sheet';
+import BottomSheet from '@gorhom/bottom-sheet';
 
 interface BottomSheetWrapperProps {
   children: React.ReactNode;
@@ -18,7 +16,10 @@ export function BottomSheetWrapper({
   onClose,
 }: BottomSheetWrapperProps) {
   const bottomSheetRef = useRef<BottomSheet>(null);
-  const snapPoints = useMemo(() => customSnapPoints || ['25%', '50%', '90%'], [customSnapPoints]);
+  const snapPoints = useMemo(
+    () => customSnapPoints || ['25%', '50%', '90%'],
+    [customSnapPoints],
+  );
 
   const handleSheetChanges = useCallback(
     (index: number) => {

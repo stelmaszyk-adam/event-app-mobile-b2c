@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import { Typography } from './Typography';
-import { mapPinColors, type Category } from '../theme/tokens';
+import { type Category } from '../theme/tokens';
 
 interface CategoryBadgeProps {
   category: Category;

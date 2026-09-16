@@ -10,7 +10,14 @@ interface EventCardProps extends Omit<PressableProps, 'children'> {
   category?: string;
 }
 
-export function EventCard({ title, imageUrl, date, venue, category, ...props }: EventCardProps) {
+export function EventCard({
+  title,
+  imageUrl,
+  date,
+  venue,
+  category: _category,
+  ...props
+}: EventCardProps) {
   return (
     <Pressable
       className="bg-surface-container-lowest rounded-xl overflow-hidden"
@@ -19,7 +26,11 @@ export function EventCard({ title, imageUrl, date, venue, category, ...props }: 
       {...props}
     >
       {imageUrl ? (
-        <Image source={{ uri: imageUrl }} className="w-full h-48" resizeMode="cover" />
+        <Image
+          source={{ uri: imageUrl }}
+          className="w-full h-48"
+          resizeMode="cover"
+        />
       ) : (
         <View className="w-full h-48 bg-surface-container-low items-center justify-center">
           <Typography variant="body-md" color="variant">
@@ -47,7 +58,13 @@ interface VenueCardProps extends Omit<PressableProps, 'children'> {
   eventsCount?: number;
 }
 
-export function VenueCard({ name, imageUrl, address, eventsCount, ...props }: VenueCardProps) {
+export function VenueCard({
+  name,
+  imageUrl,
+  address,
+  eventsCount,
+  ...props
+}: VenueCardProps) {
   return (
     <Pressable
       className="bg-surface-container-lowest rounded-xl overflow-hidden flex-row"
@@ -56,7 +73,11 @@ export function VenueCard({ name, imageUrl, address, eventsCount, ...props }: Ve
       {...props}
     >
       {imageUrl ? (
-        <Image source={{ uri: imageUrl }} className="w-20 h-20 rounded-lg m-3" resizeMode="cover" />
+        <Image
+          source={{ uri: imageUrl }}
+          className="w-20 h-20 rounded-lg m-3"
+          resizeMode="cover"
+        />
       ) : (
         <View className="w-20 h-20 rounded-lg m-3 bg-surface-container-low items-center justify-center">
           <Typography variant="body-sm" color="variant">
@@ -85,7 +106,12 @@ interface MiniCardProps extends Omit<PressableProps, 'children'> {
   imageUrl?: string;
 }
 
-export function MiniCard({ title, subtitle, imageUrl, ...props }: MiniCardProps) {
+export function MiniCard({
+  title,
+  subtitle,
+  imageUrl,
+  ...props
+}: MiniCardProps) {
   return (
     <Pressable
       className="bg-surface-container-lowest rounded-lg flex-row items-center p-2"
@@ -94,7 +120,11 @@ export function MiniCard({ title, subtitle, imageUrl, ...props }: MiniCardProps)
       {...props}
     >
       {imageUrl ? (
-        <Image source={{ uri: imageUrl }} className="w-12 h-12 rounded-md" resizeMode="cover" />
+        <Image
+          source={{ uri: imageUrl }}
+          className="w-12 h-12 rounded-md"
+          resizeMode="cover"
+        />
       ) : (
         <View className="w-12 h-12 rounded-md bg-surface-container-low" />
       )}

@@ -24,11 +24,11 @@ export function Input({ label, error, className = '', ...props }: InputProps) {
             : 'bg-surface-container-low'
         } ${error ? 'border-2 border-error/50' : ''} ${className}`}
         placeholderTextColor="#49454f"
-        onFocus={(e) => {
+        onFocus={e => {
           setFocused(true);
           props.onFocus?.(e);
         }}
-        onBlur={(e) => {
+        onBlur={e => {
           setFocused(false);
           props.onBlur?.(e);
         }}
@@ -78,11 +78,11 @@ export function Select({
   label,
   options,
   value,
-  onValueChange,
+  onValueChange: _onValueChange,
   placeholder = 'Select...',
   error,
 }: SelectProps) {
-  const selectedOption = options.find((o) => o.value === value);
+  const selectedOption = options.find(o => o.value === value);
 
   return (
     <View className="w-full">
@@ -92,7 +92,10 @@ export function Select({
         </Typography>
       )}
       <View className="bg-surface-container-low rounded-sm px-4 py-3">
-        <Typography variant="body-lg" color={selectedOption ? 'default' : 'variant'}>
+        <Typography
+          variant="body-lg"
+          color={selectedOption ? 'default' : 'variant'}
+        >
           {selectedOption?.label || placeholder}
         </Typography>
       </View>
