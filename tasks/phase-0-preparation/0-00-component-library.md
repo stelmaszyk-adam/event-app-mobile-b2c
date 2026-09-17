@@ -35,15 +35,15 @@ Build the core mobile component library using NativeWind (Tailwind for React Nat
 
 ### 3. Map-Specific Components
 
-- [ ] P1 **Custom map pin** — per-category icon + color (12 unified categories)
-- [ ] P1 **Map mini-card** — photo + name + time + distance (shown on pin click)
-- [ ] P1 **Cluster indicator** — cluster visualization at high zoom-out
+- [x] P1 **Custom map pin** — per-category icon + color (12 unified categories)
+- [x] P1 **Map mini-card** — photo + name + time + distance (shown on pin click)
+- [x] P1 **Cluster indicator** — cluster visualization at high zoom-out
 
 ### 4. Image Placeholder / Loading Strategy
 
-- [ ] P1 **Placeholder images** — branded fallback per category when venues/events have no photos
-- [ ] P1 **Progressive image loading** — blur hash / LQIP from Cloudflare Images
-- [ ] P1 **Broken image fallbacks** — graceful fallback to placeholder on load error
+- [x] P1 **Placeholder images** — branded fallback per category when venues/events have no photos
+- [x] P1 **Progressive image loading** — blur hash / LQIP from Cloudflare Images
+- [x] P1 **Broken image fallbacks** — graceful fallback to placeholder on load error
 
 ## Acceptance Criteria
 

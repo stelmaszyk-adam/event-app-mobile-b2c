@@ -6,6 +6,7 @@
 // a device or simulator. Importing that chain crashes under Jest, so this
 // mock reimplements the same no-op surface without touching real reanimated
 // internals.
+const { useRef } = require('react');
 const {
   Animated: AnimatedRN,
   Image: ImageRN,
@@ -202,29 +203,36 @@ const Reanimated = {
   useAnimatedProps: IMMEDIATE_CALLBACK_INVOCATION,
   useEvent: () => NOOP,
   useSharedValue: init => {
-    const value = { value: init };
-    return new Proxy(value, {
-      get(target, prop) {
-        if (prop === 'value') return target.value;
-        if (prop === 'get') return () => target.value;
-        if (prop === 'set') {
-          return newValue => {
-            target.value =
-              typeof newValue === 'function'
-                ? newValue(target.value)
-                : newValue;
-          };
-        }
-        return undefined;
-      },
-      set(target, prop, newValue) {
-        if (prop === 'value') {
-          target.value = newValue;
-          return true;
-        }
-        return false;
-      },
-    });
+    // Real reanimated keeps the same shared value identity across renders
+    // (it's backed by a ref internally), so mirror that here rather than
+    // creating a fresh object every render.
+    const ref = useRef();
+    if (!ref.current) {
+      const value = { value: init };
+      ref.current = new Proxy(value, {
+        get(target, prop) {
+          if (prop === 'value') return target.value;
+          if (prop === 'get') return () => target.value;
+          if (prop === 'set') {
+            return newValue => {
+              target.value =
+                typeof newValue === 'function'
+                  ? newValue(target.value)
+                  : newValue;
+            };
+          }
+          return undefined;
+        },
+        set(target, prop, newValue) {
+          if (prop === 'value') {
+            target.value = newValue;
+            return true;
+          }
+          return false;
+        },
+      });
+    }
+    return ref.current;
   },
   useAnimatedStyle: IMMEDIATE_CALLBACK_INVOCATION,
   useAnimatedReaction: NOOP,

@@ -86,6 +86,22 @@ export const mapPinColors = {
   other: '#546e7a',
 } as const;
 
+// react-native-vector-icons/MaterialCommunityIcons glyph names, one per category.
+export const categoryIcons: Record<Category, string> = {
+  music: 'music',
+  nightlife: 'glass-cocktail',
+  performing_arts: 'drama-masks',
+  food_drink: 'silverware-fork-knife',
+  sport_fitness: 'dumbbell',
+  arts_culture: 'palette',
+  education: 'school',
+  festival: 'party-popper',
+  business: 'briefcase',
+  family: 'human-male-female',
+  wellness: 'spa',
+  other: 'dots-horizontal',
+};
+
 export const categories = [
   'music',
   'nightlife',
